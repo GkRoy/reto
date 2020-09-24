@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+<div>
+    <div *ngFor="let item of menu">
+        <div class="card" *ngIf="item.visible" (click)="showMessage(item.text)">
+            <img [src]="item.icon">
+            <span class="card-text">{{ item.text }}</span>
+        </div>
+    </div>
+</div>
+<br>
+<app-footer></app-footer>
